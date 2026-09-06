@@ -22,3 +22,33 @@ In addition, the application features a **Dual-PIN Authentication Mechanism** (R
 * **Cryptography & Compression**: `javax.crypto` (AES), `java.security.MessageDigest` (SHA-256), `java.util.zip` (GZIP)
 * **Data Storage**: Local internal storage, Android Media/Gallery, and Encrypted `SharedPreferences` (No external DBMS / No Firebase)
 ## 🏗️ System Architecture & Data Flow
+-----------------------------------------------------------------------+
+|                          PRESENTATION LAYER                           |
+|  (SetupActivity, LoginActivity, MainActivity, ImageHide, AudioHide,   |
+|            ExtractActivity, HistoryActivity, FakeActivity)            |
++-----------------------------------------------------------------------+
+|
+v
++-----------------------------------------------------------------------+
+|                             LOGIC LAYER                               |
+|        CryptoStego Engine | HistoryManager | RecoveryManager          |
++-----------------------------------------------------------------------+
+|                                                                       |
+|                                                                       |
++-----------------------------------------------------------------------+
+|                     SECURITY & STORAGE LAYER                          |
+|   AES Encryption / SHA-256 | Local SharedPreferences | Device Storage |
++-----------------------------------------------------------------------+
+## 🚀 How to Run & Install
+### Prerequisites
+* **Android Studio** (Ladybug / Jellyfish or newer recommended)
+* **JDK 11+**
+* Android Device or Emulator running **Android 7.0 (API 24)** or higher
+### Setup Steps
+1. **Download Code**: Download or clone the project source repository to your local computer.
+2. **Open Project**: Open **Android Studio** and select **Open an Existing Project**.
+3. **Sync Gradle**: Navigate to the project folder and let Android Studio sync the required dependencies.
+4. **Run Application**: Connect a physical Android device via USB debugging (or start an emulator) and click **Run** (`Shift + F10`).
+## 📄 License & Project Info
+* **Project Type**: BS (IT) Final Year Project[span_0](start_span)[span_0](end_span)
+* **Affiliation**: Department of Information Technology, Govt. Graduate College Burewala (Affiliated with Bahauddin Zakariya University, Multan)[span_1](start_span)[span_1](end_span)
